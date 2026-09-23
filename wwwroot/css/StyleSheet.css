@@ -1,0 +1,13 @@
+﻿:root {
+    --primaryBG: #0D0D0F;
+    --secondaryBG: #1A1A1D;
+    --border: #2A2A2E;
+    --text: #F5F5F0;
+    --secondaryText: #A0A0A8;
+    --accent: #b200ff;
+    --success: #4ADE80;
+}
+
+body {
+    background-color: --pri
+}
