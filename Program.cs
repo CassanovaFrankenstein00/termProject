@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using termProjectPhotoApp.Data;
+using termProjectPhotoApp.Models;
 
 namespace termProjectPhotoApp
 {
@@ -18,6 +19,9 @@ namespace termProjectPhotoApp
 
             builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            builder.Services.AddDbContext<PhotoContext>(options => options.UseSqlServer(connectionString));
+
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();

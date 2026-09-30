@@ -9,5 +9,5 @@
 }
 
 body {
-    background-color: --pri
+    background-color: var(--primaryBG);
 }
