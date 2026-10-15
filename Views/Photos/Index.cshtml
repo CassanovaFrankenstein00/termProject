@@ -27,6 +27,12 @@
             <th>
                 @Html.DisplayNameFor(model => model.PhotoType)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateAdded)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -47,6 +53,12 @@
             </td>
             <td>
                 @Html.DisplayFor(model => item.PhotoType)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.DateAdded)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.Location)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |

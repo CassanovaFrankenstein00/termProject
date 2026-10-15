@@ -47,7 +47,7 @@ public class PhotosController : Controller
     // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create([Bind("ID,Title,Description,Credit,ImageUrl,PhotoType")] Photos photos)
+    public async Task<IActionResult> Create([Bind("ID,Title,Description,Credit,ImageUrl,PhotoType,DateAdded,Location")] Photos photos)
     {
         if (ModelState.IsValid)
         {
@@ -79,7 +79,7 @@ public class PhotosController : Controller
     // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Edit(int? id, [Bind("ID,Title,Description,Credit,ImageUrl,PhotoType")] Photos photos)
+    public async Task<IActionResult> Edit(int? id, [Bind("ID,Title,Description,Credit,ImageUrl,PhotoType,DateAdded,Location")] Photos photos)
     {
         if (id != photos.ID)
         {

@@ -38,9 +38,24 @@
             </div>
 
             <div class="form-group">
-                <label asp-for="PhotoType" class="control-label"></label>
-                <input asp-for="PhotoType" class="form-control" />
-                <span asp-validation-for="PhotoType" class="text-danger"></span>
+                <label asp-for="PhotoType"></label>
+                <select asp-for="PhotoType"
+                        asp-items="Html.GetEnumSelectList<termProjectPhotoApp.Models.Type>()"
+                        class="form-control">
+                    <option value="">-- Select Type --</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="DateAdded" class="control-label"></label>
+                <input asp-for="DateAdded" class="form-control" />
+                <span asp-validation-for="DateAdded" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Location" class="control-label"></label>
+                <input asp-for="Location" class="form-control" />
+                <span asp-validation-for="Location" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
